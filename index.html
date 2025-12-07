@@ -8,29 +8,31 @@
 </head>
 <body>
 
-    <!-- Audio -->
+    <!-- Música -->
     <audio id="background-music" loop>
         <source src="cancion.mp3" type="audio/mpeg">
-        </audio>
+        Tu navegador no soporta audio HTML5.
+    </audio>
 
-    <!-- Music control -->
-    <button id="music-btn" class="music-control" aria-label="Control de música">
+    <button id="music-btn" class="music-control">
         <span id="music-icon">▶️</span> Música
     </button>
 
-    <!-- Transition overlay -->
+    <!-- Efecto de transición -->
     <div id="transition-overlay"></div>
 
-    <!-- HERO (imagen de fondo original restaurada) -->
+    <!-- HERO (imagen original restaurada) -->
     <header class="hero">
         <div class="overlay"></div>
+
         <h1 class="title fade-in">Anayeli & Humberto</h1>
-        <p class="subtitle fade-in">Nuestra historia continua...</p>
+        <p class="subtitle fade-in">Nuestra historia continúa...</p>
         <p class="date fade-in">31 · Enero · 2026</p>
+
         <a href="#info" class="btn fade-in">Ver detalles</a>
     </header>
 
-    <!-- Info -->
+    <!-- Información -->
     <section id="info" class="section">
         <h2 class="section-title">¡Estamos felices de invitarte!</h2>
         <p class="section-text">
@@ -44,37 +46,43 @@
         <h2 class="section-title">Ceremonia & Recepción</h2>
 
         <div class="card-grid">
+
+            <!-- Ceremonia -->
             <div class="card">
                 <h3>Ceremonia</h3>
                 <p><strong>Parroquia de Santa María Moyotzingo</strong></p>
                 <p><strong>31 de enero • 2:00 PM</strong></p>
 
-                <a
+                <a 
                     class="maps-btn"
-                    href="https://maps.apple.com/place?address=Calyeca,%2074129%20Santa%20María%20Moyotzingo,%20Pue.,%20México&coordinate=19.245708,-98.405586&name=Iglesia%20de%20Santa%20María%20Moyotzingo&place-id=I80FF08F1492FBC32&map=explore"
+                    href="https://maps.apple.com/?ll=19.245708,-98.405586&q=Parroquia%20de%20Santa%20Mar%C3%ADa%20Moyotzingo"
                     target="_blank" rel="noopener noreferrer">
-                    Ver Ubicación (Misa)
+                    📍 Ver Ubicación (Misa)
                 </a>
             </div>
 
+            <!-- Recepción -->
             <div class="card">
                 <h3>Recepción</h3>
-                <p><strong>Calle 2 de Abril #9, Santa María Moyotzingo</strong></p>
+                <p><strong>Calle 2 de Abril #9</strong></p>
+                <p><strong>Santa María Moyotzingo</strong></p>
                 <p><strong>6:00 PM</strong></p>
 
-                <a
+                <a 
                     class="maps-btn"
-                    href="https://maps.apple.com/place?coordinate=19.246293,-98.406053&name=Calle%202%20de%20Abril%2027&map=explore"
+                    href="https://maps.apple.com/?ll=19.246293,-98.406053&q=Calle%202%20de%20Abril%20%239%20Santa%20Mar%C3%ADa%20Moyotzingo"
                     target="_blank" rel="noopener noreferrer">
-                    Ver Ubicación (Recepción)
+                    🎉 Ver Ubicación (Recepción)
                 </a>
             </div>
+
         </div>
     </section>
 
     <!-- Cuenta regresiva -->
     <section class="section">
         <h2 class="section-title">Cuenta regresiva</h2>
+
         <div id="countdown" class="countdown">
             <div><span id="days">--</span><small>Días</small></div>
             <div><span id="hours">--</span><small>Horas</small></div>
@@ -83,9 +91,9 @@
         </div>
     </section>
 
-    <!-- Footer (restaurado texto original) -->
+    <!-- Footer -->
     <footer class="footer">
-        Gracias por acompañarnos. Con amor, Anayeli & Humberto
+        Gracias por acompañarnos ❤️
     </footer>
 
     <script src="scripts.js"></script>
