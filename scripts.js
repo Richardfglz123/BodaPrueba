@@ -87,24 +87,6 @@ setInterval(() => {
 }, 600);
 
 
-/* ---------------- Invitación deslizable ---------------- */
-const invitePanel = document.getElementById('invite-panel');
-const openInviteBtn = document.getElementById('open-invite');
-const inviteClose = document.getElementById('invite-close');
-
-function openInvite() {
-    invitePanel.classList.add('open');
-    invitePanel.setAttribute('aria-hidden', 'false');
-}
-
-function closeInvite() {
-    invitePanel.classList.remove('open');
-    invitePanel.setAttribute('aria-hidden', 'true');
-}
-
-if (openInviteBtn) openInviteBtn.addEventListener('click', openInvite);
-if (inviteClose) inviteClose.addEventListener('click', closeInvite);
-
 // Close when clicking outside panel on desktop
 document.addEventListener('click', (e) => {
     if (!invitePanel.classList.contains('open')) return;
