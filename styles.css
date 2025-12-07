@@ -1,0 +1,293 @@
+/* ---------- Tipos y reset ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+    font-family: "Georgia", serif;
+    background: #fff9f2;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Transition overlay */
+#transition-overlay {
+    position: fixed;
+    inset: 0;
+    background: #fff9f2;
+    z-index: 9999;
+    animation: fadeOut 1.2s forwards;
+}
+
+/* Hero - imagen original restaurada */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #f6f6f6;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.date {
+    font-size: 1.4rem;
+    color: #ffd7d7;
+    margin: 20px 0;
+    z-index: 1;
+}
+
+.btn {
+    z-index: 1;
+    padding: 12px 25px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover { background: #ffd7d7; }
+
+/* Sections */
+.section { padding: 70px 20px; text-align: center; animation: fadeUp 1.2s ease-out; }
+.section-title { font-size: 2.2rem; margin-bottom: 20px; }
+.section-text { max-width: 700px; margin: 0 auto; font-size: 1.2rem; line-height: 1.6; }
+.bg-light { background: #fff1ea; }
+
+/* Card grid & cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    border: 1px solid #ffd6cc;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform .3s;
+}
+
+.card:hover { transform: translateY(-6px); }
+
+.card h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.card p { margin-bottom: 8px; }
+
+/* maps button */
+.maps-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 18px;
+    background: #ffbfb6;
+    color: white;
+    border-radius: 36px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.22s;
+}
+.maps-btn:hover { transform: scale(1.05); }
+
+/* Countdown */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #ffd6cc;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #6b524b;
+}
+
+.countdown small {
+    font-size: 0.85rem;
+    color: #7f6a63;
+}
+
+/* RSVP form (restored) */
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 80%;
+    max-width: 450px;
+    margin: 25px auto;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e5c3be;
+    font-size: 1rem;
+}
+
+.rsvp-form button {
+    padding: 12px;
+    background: #ffbfb6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rsvp-form button:hover { background: #ffa89d; }
+
+.rsvp-message {
+    margin-top: 15px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #4b3b36;
+}
+
+/* Music control */
+.music-control {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    padding: 9px 16px;
+    border-radius: 40px;
+    background: #ffe3dd;
+    border: 1px solid #ffcec4;
+    cursor: pointer;
+    z-index: 10000;
+    font-weight: 600;
+}
+
+/* Petals */
+.petal {
+    position: fixed;
+    top: -10px;
+    color: #ffdfdf;
+    font-size: 1.2rem;
+    animation: fall linear infinite;
+    pointer-events: none;
+    opacity: 0.85;
+    z-index: 2;
+}
+@keyframes fall { 0% { transform: translateY(-10px) rotate(0deg); } 100% { transform: translateY(110vh) rotate(360deg); opacity: 0; } }
+
+/* Animations */
+.fade-in { animation: fadeIn 1.5s forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }
+
+/* Invite panel (sliding) */
+.invite-panel {
+    position: fixed;
+    right: -420px; /* hidden by default */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 380px;
+    max-width: 92%;
+    background: linear-gradient(180deg,#ffffff,#fff7f4);
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+    padding: 20px;
+    z-index: 20000;
+    transition: right 0.45s cubic-bezier(.2,.9,.3,1);
+}
+
+.invite-panel.open { right: 18px; }
+
+.invite-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.invite-content h2 {
+    font-family: "Georgia", serif;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.invite-content p { margin: 8px 0; text-align: center; color: #5b4a42; }
+
+.invite-actions { display:flex; gap:10px; justify-content:center; margin-top:12px; flex-wrap:wrap; }
+
+/* Open invite floating button */
+.open-invite {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #ffb6aa;
+    color: white;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 999px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    z-index: 20001;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Footer (restored original) */
+.footer {
+    padding: 24px;
+    text-align: center;
+    color: #4b3b36;
+    background: #fff6f2;
+    border-top: 1px solid #ffd6cc;
+    margin-top: 30px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .title { font-size: 2.6rem; }
+    .countdown div { width: 84px; }
+    .invite-panel { width: 92%; right: -100%; left: 50%; transform: translate(-50%, -50%); top: 12%; }
+    .invite-panel.open { right: auto; left: 50%; transform: translate(-50%, 0); }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boda Anayeli & Humberto</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- Audio -->
+    <audio id="background-music" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+        </audio>
+
+    <!-- Music control -->
+    <button id="music-btn" class="music-control" aria-label="Control de música">
+        <span id="music-icon">▶️</span> Música
+    </button>
+
+    <!-- Transition overlay -->
+    <div id="transition-overlay"></div>
+
+    <!-- HERO (imagen de fondo original restaurada) -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <h1 class="title fade-in">Anayeli & Humberto</h1>
+        <p class="subtitle fade-in">Nuestra historia continua...</p>
+        <p class="date fade-in">31 · Enero · 2026</p>
+        <a href="#info" class="btn fade-in">Ver detalles</a>
+    </header>
+
+    <!-- Info -->
+    <section id="info" class="section">
+        <h2 class="section-title">¡Estamos felices de invitarte!</h2>
+        <p class="section-text">
+            Con mucho amor y alegría, queremos compartir contigo uno de los días más importantes
+            de nuestras vidas. Será un honor contar con tu presencia en nuestra boda.
+        </p>
+    </section>
+
+    <!-- Ceremonia y recepción -->
+    <section class="section bg-light">
+        <h2 class="section-title">Ceremonia & Recepción</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Ceremonia</h3>
+                <p><strong>Parroquia de Santa María Moyotzingo</strong></p>
+                <p><strong>31 de enero • 2:00 PM</strong></p>
+
+                <a
+                    class="maps-btn"
+                    href="https://maps.apple.com/place?map=explore&place-id=I10283E50CF9917A0&address=Avenida+Benito+Juárez+1%2C+Tlacomulco%2C+74129+Santa+María+Moyotzingo%2C+Pue.%2C+México&coordinate=19.244196%2C-98.405477&name=Parroquia+Santa+María+de+la+Candelaria+Moyotzingo&_provider=9902"
+                    target="_blank" rel="noopener noreferrer">
+                    Ver Ubicación (Misa)
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Recepción</h3>
+                <p><strong>Calle 2 de Abril #9, Santa María Moyotzingo</strong></p>
+                <p><strong>6:00 PM</strong></p>
+
+                <a
+                    class="maps-btn"
+                    href="https://maps.apple.com/place?map=explore&address=Calle+2+de+Abril%2C+Calyeca%2C+74129+Santa+María+Moyotzingo%2C+Pue.%2C+México&coordinate=19.245739%2C-98.404965&name=Calle+2+de+Abril"
+                    target="_blank" rel="noopener noreferrer">
+                    Ver Ubicación (Recepción)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuenta regresiva -->
+    <section class="section">
+        <h2 class="section-title">Cuenta regresiva</h2>
+        <div id="countdown" class="countdown">
+            <div><span id="days">--</span><small>Días</small></div>
+            <div><span id="hours">--</span><small>Horas</small></div>
+            <div><span id="minutes">--</span><small>Minutos</small></div>
+            <div><span id="seconds">--</span><small>Segundos</small></div>
+        </div>
+    </section>
+
+
+    <!-- Invitación digital deslizable (nuevo) -->
+    <div id="invite-panel" class="invite-panel" aria-hidden="true">
+        <button id="invite-close" class="invite-close" aria-label="Cerrar invitación">✕</button>
+        <div class="invite-content">
+            <h2>Anayeli & Humberto</h2>
+            <p class="invite-line">Estás cordialmente invitado a nuestra boda</p>
+            <p class="invite-date">31 de Enero de 2026 — 2:00 PM</p>
+            <p class="invite-place">Parroquia de Santa María Moyotzingo</p>
+
+            <div class="invite-actions">
+                <a class="maps-btn" href="https://maps.apple.com/place?map=explore&place-id=I10283E50CF9917A0&address=Avenida+Benito+Juárez+1%2C+Tlacomulco%2C+74129+Santa+María+Moyotzingo%2C+Pue.%2C+México&coordinate=19.244196%2C-98.405477&name=Parroquia+Santa+María+de+la+Candelaria+Moyotzingo&_provider=9902" target="_blank">📍 Cómo llegar (Misa)</a>
+                <a class="maps-btn" href="https://maps.apple.com/place?map=explore&address=Calle+2+de+Abril%2C+Calyeca%2C+74129+Santa+María+Moyotzingo%2C+Pue.%2C+México&coordinate=19.245739%2C-98.404965&name=Calle+2+de+Abril" target="_blank">🎉 Cómo llegar (Recepción)</a>
+            </div>
+
+            <p class="invite-footer">Trae tu mejor sonrisa 🤍</p>
+        </div>
+    </div>
+
+    <!-- Botón para abrir invitación -->
+    <button id="open-invite" class="open-invite" aria-label="Abrir invitación">Invitación ✨</button>
+
+    <!-- Footer (restaurado texto original) -->
+    <footer class="footer">
+        Gracias por acompañarnos. Con amor, Anayeli & Humberto ❤️
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
